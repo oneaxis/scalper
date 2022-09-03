@@ -161,7 +161,7 @@ class MinStepDistance {
 
   MinStepDistance.fromJson(Map<String, dynamic> json) {
     unit = json['unit'];
-    value = json['value'];
+    value = json['value'].toDouble();
   }
 
   Map<String, dynamic> toJson() {
@@ -174,13 +174,13 @@ class MinStepDistance {
 
 class MaxStopOrProfitDistance {
   String? unit;
-  int? value;
+  double? value;
 
   MaxStopOrProfitDistance({this.unit, this.value});
 
   MaxStopOrProfitDistance.fromJson(Map<String, dynamic> json) {
     unit = json['unit'];
-    value = json['value'];
+    value = json['value'].toDouble();
   }
 
   Map<String, dynamic> toJson() {
@@ -194,7 +194,7 @@ class MaxStopOrProfitDistance {
 class Snapshot {
   String? marketStatus;
   String? updateTime;
-  int? delayTime;
+  double? delayTime;
   double? bid;
   double? offer;
   int? decimalPlacesFactor;
@@ -212,7 +212,7 @@ class Snapshot {
   Snapshot.fromJson(Map<String, dynamic> json) {
     marketStatus = json['marketStatus'];
     updateTime = json['updateTime'];
-    delayTime = json['delayTime'];
+    delayTime = json['delayTime'].toDouble();
     bid = json['bid'];
     offer = json['offer'];
     decimalPlacesFactor = json['decimalPlacesFactor'];
